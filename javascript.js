@@ -60,10 +60,11 @@ function greet() {
   }
   
   const button = document.querySelector("button"); // this was missing
-  button.addEventListener("click", greet); */
+  button.addEventListener("click", greet); *
 
   let answer = parseInt(prompt("please enter a number you'd like to FizzBuzz up to : "));
   for (let i = 1 ; i <= answer ; i++){
+    
     if (i % 3 === 0 && i % 5 === 0) {
       console.log("FizzBuzz");
     } else if  (i % 3 === 0) {
@@ -73,4 +74,41 @@ function greet() {
     } else {
       console.log(i);
     }
-  }
+  }*/
+    const container = document.querySelector("#container");
+
+    const content = document.createElement("div");
+    content.classList.add("content");
+    content.textContent = "This is the glorious text-content!";
+    
+    
+    container.appendChild(content);
+
+
+    const redparagraph = document.createElement("p");
+    redparagraph.textContent = "Hey, I am red!";
+    redparagraph.style.color = "red";
+    
+    container.appendChild(redparagraph);
+
+    const blueh3 = document.createElement("h3");
+    blueh3.textContent = "I’m a blue h3!";
+    blueh3.style.color = "blue";
+    
+    container.appendChild(blueh3);
+
+    const innerDiv = document.createElement("div");
+    innerDiv.style.border = "1px solid black";
+    innerDiv.style.backgroundColor = "pink";
+
+    const innerH1 = document.createElement("h1");
+    innerH1.textContent = "I’m in a div";
+    
+    const innerP = document.createElement("p");
+    innerP.textContent = "ME TOO!";
+    
+    innerDiv.appendChild(innerH1);
+    innerDiv.appendChild(innerP);
+    
+    container.appendChild(innerDiv);
+
